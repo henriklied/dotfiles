@@ -1,0 +1,23 @@
+function get_mtu {
+    ping -D -s $1 www.dslreports.com
+}
+
+# Recursive rm
+function rrm {
+    find . | grep $1 | xargs rm
+}
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+parse_svn_branch() {
+  parse_svn_url | sed -e 's#^'"$(parse_svn_repository_root)"'##g' | awk -F / '{print "("$1 "/" $2 ")"}'
+}
+parse_svn_url() {
+  svn info 2>/dev/null | grep -e '^URL*' | sed -e 's#^URL: *\(.*\)#\1#g '
+}
+parse_svn_repository_root() {
+  svn info 2>/dev/null | grep -e '^Repository Root:*' | sed -e 's#^Repository Root: *\(.*\)#\1\/#g '
+}
+
+

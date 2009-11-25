@@ -1,0 +1,25 @@
+# Textmate open current directory
+alias m='mate .'
+alias killpython='killall Python; killall python; killall python2.6'
+
+# From my Windows days. :-)
+alias cls='clear'
+
+# Usage: echo 'Hello, World!' | curlpaste http://example.org/
+alias curlpaste='curl -d @-'
+
+# iPython classic. I hate the In<->out
+# alias python='ipython -classic'
+alias python='python2.6'
+
+# Get current IP
+alias ip='curl -a http://fourmargins.com/ip/ | pbcopy; echo ; echo; echo Pasted to clipboard'
+
+# ls
+alias ls='ls -Fh'
+alias la='ls -A'
+
+
+
+alias where='which'
+alias mvdir='mv'

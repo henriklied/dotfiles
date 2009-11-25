@@ -1,0 +1,16 @@
+export GOROOT=$HOME/go
+export GOOS='darwin'
+export GOARCH='amd64'
+export GOBIN=$HOME/go/src
+
+
+export PROJECT_DIR=$HOME/dev
+export DJANGO=$PROJECT_DIR/libs/django_trunk
+export SCATTER=$PROJECT_DIR/projects/django-scatter
+
+export TEMP_PROJECTS=$PROJECT_DIR/temp
+export CLICOLORS=1
+
+export PYTHONSTARTUP=$HOME/.pythonrc
+
+
